@@ -41,6 +41,11 @@
         <name>Report</name>
     </types>
     <types>
+        <members>Place_a_Purchase_Order</members>
+        <members>DNA_Test_Verification</members>
+        <name>Flow</name>
+    </types>
+    <types>
         <members>*</members>
         <name>Profile</name>
     </types>
