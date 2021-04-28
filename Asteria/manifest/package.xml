@@ -37,6 +37,10 @@
         <name>Queue</name>
     </types>
     <types>
+        <members>Inventory_with_Accounts_and_Purchase</members>
+        <name>Report</name>
+    </types>
+    <types>
         <members>*</members>
         <name>Profile</name>
     </types>
