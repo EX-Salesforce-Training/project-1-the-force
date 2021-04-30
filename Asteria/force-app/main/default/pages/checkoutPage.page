@@ -1,0 +1,10 @@
+<apex:page standardController="Purchase_Orders__c">
+  <h1>Submit new Order</h1>
+  <apex:form>
+    <apex:pageBlock>
+      <apex:pageBlockSection>
+        <apex:inputField value="{!Purchase_Orders__c.Name}"/>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>
