@@ -13,7 +13,7 @@ public without sharing class PurchaseOrderCheckoutController {
                 // Create a custom Set Controller for only specific Purchase Orders (New and Related to our account)
                 purchaseOrderSetController = new ApexPages.StandardSetController(Database.getQueryLocator(
                     // User the account ID to get purchase orders related to the account
-                    [SELECT Id, Name, Price FROM Purchase_Orders__c WHERE Status__c = 'New'AND Account__c = :acct ]
+                    [SELECT Id, Name FROM Purchase_Orders__c WHERE Status__c = 'New'AND Account__c = :acct ]
                 ));
             }
             return purchaseOrderSetController;
@@ -25,13 +25,17 @@ public without sharing class PurchaseOrderCheckoutController {
         return (List<Purchase_Orders__c>) purchaseOrderSetController.getRecords();
     }
 
-    public Pagereference submitOrder(){
+    public PageReference submitOrder(){
         List<Purchase_Orders__c> updateList = purchaseOrderSetController.getRecords();
 
-        for(Purchase_Order__c o: updateList){
+        for(Purchase_Orders__c o: updateList){
             o.status__c = 'Pending';
         }
 
         insert updateList;
+        PageReference page = System.Page.SiteRegisterConfirm;
+        page.setRedirect(true);
+        return page;
+
     }
 }
