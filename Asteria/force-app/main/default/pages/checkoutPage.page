@@ -1,10 +1,18 @@
-<apex:page standardController="Purchase_Orders__c">
+<apex:page controller="PurchaseOrderCheckoutController">
   <h1>Submit new Order</h1>
-  <apex:form>
-    <apex:pageBlock>
-      <apex:pageBlockSection>
-        <apex:inputField value="{!Purchase_Orders__c.Name}"/>
-      </apex:pageBlockSection>
+    <apex:pageBlock title="Order Details">
+      <apex:repeat value="{!PurchaseOrders}" var="o">
+            <apex:outputLink value="/{!o.id}" ><li>{! o.Name }</li></apex:outputLink>
+    	</apex:repeat>
+      <!-- <apex:pageBlockSection>
+        <apex:outputField value="{!Purchase_Orders__c.Name}"/>
+        <apex:outputField value="{!Purchase_Orders__c.Account__c}"/>
+        <apex:outputField value="{!Purchase_Orders__c.Inventory__c}"/>
+        <apex:outputField value="{!Purchase_Orders__c.Inventory_Type__c}"/>
+        <apex:outputField value="{!Purchase_Orders__c.Inventory_Weight__c}"/>
+        <apex:outputField value="{!Purchase_Orders__c.Status__c}"/>
+      </apex:pageBlockSection> -->
     </apex:pageBlock>
-  </apex:form>
 </apex:page>
+
+<!-- ?&id=a065e000002MZUMAA4 -->
