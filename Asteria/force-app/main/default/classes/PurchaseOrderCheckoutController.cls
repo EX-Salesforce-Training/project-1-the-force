@@ -21,7 +21,7 @@ public without sharing class PurchaseOrderCheckoutController {
         set;
     }
 
-    public list<Purchase_Orders__c> getPurchaseOrders() {
+    public List<Purchase_Orders__c> getPurchaseOrders() {
         return (List<Purchase_Orders__c>) purchaseOrderSetController.getRecords();
     }
 
@@ -32,8 +32,8 @@ public without sharing class PurchaseOrderCheckoutController {
             o.status__c = 'Pending';
         }
 
-        insert updateList;
-        PageReference page = System.Page.SiteRegisterConfirm;
+        update updateList;
+        PageReference page = System.Page.TestPage;
         page.setRedirect(true);
         return page;
 
