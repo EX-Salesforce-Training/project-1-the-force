@@ -1,0 +1,52 @@
+<apex:page standardController="Account" extensions = "AccountAddressesExtension" showHeader="false">
+   <apex:form>
+        <apex:pageBlock title="Account Summary">
+        
+            Name: {! Account.Name } <br/>
+            <apex:inputField value="{! Account.Name }"/>
+            Account ID: {! Account.ID } <br/>
+            
+            
+    </apex:pageBlock>
+    <apex:pageBlock title="Contacts">
+   <apex:pageBlockTable value="{!Account.contacts}" var="contact">
+      <apex:column value="{!contact.Name}"/>
+     
+      <apex:column headerValue="{!contact.Title}"/>
+     
+      <apex:column value="{!contact.Phone}"/>
+   </apex:pageBlockTable>
+</apex:pageBlock>
+
+
+
+
+
+
+<apex:pageBlock>
+
+                <apex:outputText value="{!record.BillingStreet}" />&nbsp;<br />
+                
+              
+                <apex:outputText value="{!record.BillingCity}" />
+                
+
+                
+                <apex:outputText value="{!record.BillingState}" />&nbsp;
+
+                <apex:outputText value="{!record.BillingPostalCode}" />&nbsp;
+               
+                
+
+                <apex:outputText value="{!record.BillingCountry}" /><br />
+
+                
+                <apex:commandButton value="Save" action="{!quicksave}" id="saveButton"  />  
+                        
+               
+       
+</apex:pageBlock> 
+
+                
+</apex:form>
+</apex:page>
