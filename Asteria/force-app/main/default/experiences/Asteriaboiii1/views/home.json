@@ -1,0 +1,110 @@
+{
+  "appPageId" : "50a1c97d-2dc8-491e-8bbd-77b0dbf16670",
+  "componentName" : "siteforce:sldsTwoCol66Layout",
+  "id" : "172ffb05-9b6f-4bca-b789-be3e17051ca2",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1 style=\"text-align: center;\"><b style=\"font-size: 36px; color: rgb(0, 0, 0); font-family: helvetica;\">Welcome To Asteria:</b><b style=\"font-size: 28px; color: rgb(0, 0, 0); font-family: helvetica;\"> </b><span style=\"font-size: 28px;\">The Future of Deep Space Mining</span></h1>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "cc6906b2-9ab8-49a6-8461-6c67b363b740",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d993b1c2-33d9-40d2-9842-c55515bc0204",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "enableInlineEdit" : true,
+        "filterName" : "00B5e0000018yivEAA",
+        "layout" : "COMPACT",
+        "pageSize" : 7,
+        "scope" : "Inventory__c",
+        "showActionBar" : true,
+        "showChartsPanel" : true,
+        "showDisplay" : "showall",
+        "showFilterPanel" : true,
+        "showImageIcon" : true,
+        "showManualRefreshButton" : true,
+        "showObjectName" : true,
+        "showPinnedList" : true,
+        "showSearchBar" : true
+      },
+      "componentName" : "forceCommunity:objectHome",
+      "id" : "e691b0bb-52f9-4a2b-93ee-019898f2598b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "15372811-40a2-4213-adfc-a2b8ee45f2b1",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerBackgroundColor" : "",
+        "bannerPosition" : "top",
+        "bannerSizePercent" : 25,
+        "borderRadius" : 40,
+        "boxShadow" : true,
+        "haveBanner" : true,
+        "iconBackgroundColor" : "rgb(255,255,255)",
+        "iconSize" : "medium",
+        "noImageColor" : "rgb(212, 212, 212)",
+        "overlay" : "rgba(0,0,0,0.01)",
+        "templateType" : "default",
+        "tileMenuEditor" : "Asteria1",
+        "titleColor" : "",
+        "titleFontSize" : "large",
+        "titleHorizontalAlign" : "center"
+      },
+      "componentName" : "community_navigation:tileMenu",
+      "id" : "714580b7-8930-43f8-8d9f-7835d68305a2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a07cba69-98dc-4323-8b2f-316f4672e94c",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "height" : "350",
+        "pageName" : "SingupHomePage",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:visualforcePage",
+      "id" : "2f9279eb-2df7-4f85-9a8c-41de6e0d04e3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0316d7d7-9f58-4115-85b1-760facdbabff",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "59fa6ee6-5301-4d92-9244-21be8be3018b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "822be8cf-5ada-421a-b74d-385a961e41d0",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}
