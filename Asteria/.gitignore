@@ -6,7 +6,7 @@
 .sfdx/
 .localdevserver/
 
-#Custom Tasks for vscode
+# Custom Tasks for vscode
 tasks.json
 
 # LWC VSCode autocomplete
