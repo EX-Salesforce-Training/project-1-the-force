@@ -1,44 +1,43 @@
-<apex:page standardController="Account" extensions = "AccountAddressesExtension" showHeader="false">
-   <apex:form>
-        <apex:pageBlock title="Account Summary">
-        
-            Name: {! Account.Name } <br/>
-            <apex:inputField value="{! Account.Name }"/>
-            Account ID: {! Account.ID } <br/>
-            
-            
-    </apex:pageBlock>
-    <apex:pageBlock title="Contacts">
-   <apex:pageBlockTable value="{!Account.contacts}" var="contact">
-      <apex:column value="{!contact.Name}"/>
+<apex:page controller="AccountAddressesExtension">
+   
+    
+         
+    <apex:pageBlock title="Account">
+   <apex:pageBlockTable value="{!Account}" var="Account">
+      <apex:column value="{!Account.Name}"/>
      
-      <apex:column headerValue="{!contact.Title}"/>
+      <apex:column headerValue="{!Account.phone}"/>
      
-      <apex:column value="{!contact.Phone}"/>
+     
    </apex:pageBlockTable>
-</apex:pageBlock>
+   </apex:pageBlock>
 
-
-
+   </apex:page>
+<!--
+   {!Account.Name}
 
 
 
 <apex:pageBlock>
 
-                <apex:outputText value="{!record.BillingStreet}" />&nbsp;<br />
+
+
+
+
+                <apex:outputText value="{}" />&nbsp;<br />
                 
               
-                <apex:outputText value="{!record.BillingCity}" />
+                <apex:outputText value="{!Account}" />
                 
 
                 
-                <apex:outputText value="{!record.BillingState}" />&nbsp;
+                <apex:outputText value="{!Account.BillingState}" />&nbsp;
 
-                <apex:outputText value="{!record.BillingPostalCode}" />&nbsp;
+                <apex:outputText value="{!Account.BillingPostalCode}" />&nbsp;
                
                 
 
-                <apex:outputText value="{!record.BillingCountry}" /><br />
+                <apex:outputText value="{!Account.BillingCountry}" /><br />
 
                 
                 <apex:commandButton value="Save" action="{!quicksave}" id="saveButton"  />  
@@ -47,6 +46,11 @@
        
 </apex:pageBlock> 
 
-                
-</apex:form>
-</apex:page>
+-->
+<!--    <apex:pageBlock title="Account Summary">
+        
+            Name: {! Account.Name } <br/>
+            <apex:inputField value="{! Account.Name }"/>
+            Account ID: {! Account.ID } <br/>
+            
+    -->
