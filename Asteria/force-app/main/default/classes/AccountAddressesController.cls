@@ -1,4 +1,4 @@
-public with sharing class AccountAddressesController {
+public without sharing class AccountAddressesController {
 
     
     
@@ -39,7 +39,7 @@ public with sharing class AccountAddressesController {
               // Create a custom Set Controller for only specific Purchase Orders (New and Related to our account)
               purchaseOrderSetController = new ApexPages.StandardSetController(Database.getQueryLocator(
                   // User the account ID to get purchase orders related to the account
-                  [SELECT Id, Name, Account__c, Inventory__c, Inventory_Type__c, Inventory_Weight__c, Status__c FROM Purchase_Orders__c WHERE (Status__c = 'Pending' OR Status__c = 'Approved')AND Account__c = :acct ]
+                  [SELECT Id, Name, Account__c, Inventory__c, Inventory_Type__c, Inventory_Weight__c, Status__c FROM Purchase_Orders__c WHERE (Status__c = 'Pending'OR Status__c = 'Approved') AND Account__c = :acct]
               ));
           }
           return purchaseOrderSetController;
