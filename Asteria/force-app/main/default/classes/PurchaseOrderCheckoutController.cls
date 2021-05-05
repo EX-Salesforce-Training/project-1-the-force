@@ -48,7 +48,7 @@ public without sharing class PurchaseOrderCheckoutController {
         update updateList;
 
         // Redirect to account orders page
-        PageReference page = System.Page.Account;
+        PageReference page = System.Page.AccountViewEdit;
         page.setRedirect(true);
         return page;
 
