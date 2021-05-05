@@ -1,6 +1,16 @@
-<apex:page controller="PurchaseOrderCheckoutController">
-    <h1>Your Shopping Cart</h1>
+<apex:page controller="PurchaseOrderCheckoutController" showheader="false">
+
+    <style>
+        .panelwrapper{
+            background-color: rgb(105, 71, 176) !important;
+        }
+    
+    </style>
+
+    <div style = "background-color:rgba(195, 191, 191, 0.63)">
+    <div style="text-align:center; font-weight:bold; font-size:3rem"><h1>Your Shopping Cart</h1></div>
     <apex:form>
+        <apex:outputPanel styleClass="panelWrapper" layout="block">
         <apex:pageBlock title="Order Details">
             <apex:repeat value="{!PurchaseOrders}" var="o">
                 <apex:pageBlock >
@@ -14,7 +24,11 @@
                     </apex:pageBlockSection>
                 </apex:pageBlock>
             </apex:repeat>
+        
             <apex:commandButton action="{!submitOrder}" value="Submit Orders"/>
         </apex:pageBlock>
+    </apex:outputPanel>
     </apex:form>
+    </div>
+   
 </apex:page>

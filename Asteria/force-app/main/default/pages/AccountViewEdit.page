@@ -1,10 +1,13 @@
 <apex:page controller="AccountAddressesController">
-    
+    <div style = "background-color:rgba(195, 191, 191, 0.63)">
+        <div style="text-align:center; font-weight:bold; font-size:3rem"><h1>Your Account</h1></div>
     <apex:pageBlock title="Account Details">
         <apex:repeat value="{!Account}" var="a">
             <apex:pageBlock >
                 <apex:pageBlockSection >
                     <apex:outputField value="{!a.Name}"/>
+                    <apex:outputField value="{!a.ID}"/>
+                    <apex:outputField value="{!a.phone}"/>
                     <apex:outputField value="{!a.BillingCountry}"/>
                     <apex:outputField value="{!a.BillingPostalCode}"/>
                     <apex:outputField value="{!a.BillingState}"/>
@@ -31,45 +34,5 @@
          </apex:pageBlock>
      </apex:repeat>
     </apex:pageBlock>
+    </div>
 </apex:page>
-<!--
-   {!Account.Name}
-
-
-
-<apex:pageBlock>
-
-
-
-
-
-                <apex:outputText value="{}" />&nbsp;<br />
-                
-              
-                <apex:outputText value="{!Account}" />
-                
-
-                
-                <apex:outputText value="{!Account.BillingState}" />&nbsp;
-
-                <apex:outputText value="{!Account.BillingPostalCode}" />&nbsp;
-               
-                
-
-                <apex:outputText value="{!Account.BillingCountry}" /><br />
-
-                
-                <apex:commandButton value="Save" action="{!quicksave}" id="saveButton"  />  
-                        
-               
-       
-</apex:pageBlock> 
-
--->
-<!--    <apex:pageBlock title="Account Summary">
-        
-            Name: {! Account.Name } <br/>
-            <apex:inputField value="{! Account.Name }"/>
-            Account ID: {! Account.ID } <br/>
-            
-    -->

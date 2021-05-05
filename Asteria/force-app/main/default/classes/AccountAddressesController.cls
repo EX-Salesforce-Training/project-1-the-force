@@ -14,7 +14,7 @@ public without sharing class AccountAddressesController {
                 // Create a custom Set Controller for only specific Purchase Orders (New and Related to our account)
                 AccountSetController = new ApexPages.StandardSetController(Database.getQueryLocator(
                     // User the account ID to get purchase orders related to the account
-                    [SELECT Id, Name, BillingCountry, BillingPostalCode, BillingState, BillingCity, BillingStreet, BillingLatitude, BillingLongitude FROM Account WHERE id = :acct]
+                    [SELECT Id, Name, Phone, BillingCountry, BillingPostalCode, BillingState, BillingCity, BillingStreet, BillingLatitude, BillingLongitude FROM Account WHERE id = :acct]
                 ));
             }
             return AccountSetController;
