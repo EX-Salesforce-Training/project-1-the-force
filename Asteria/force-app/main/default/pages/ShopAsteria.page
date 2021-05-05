@@ -32,8 +32,8 @@
                             </apex:pageBlockSection>
                             
                             <!--This button redirects to the shopping cart/checkout page-->
-                        	<apex:commandButton value="         Add Item to Order         " action="{!addToCart}" id="Button1">
-                                <apex:param assignTo="{!invItem}" id="button1param" name="itemID" value="{!Item.ID}"/>
+                        	<apex:commandButton value="         Add Item to Order         " action="{!addToCart}" id="Button1" rerender="pb">
+                                <apex:param name="eventId" value="{!Item.id}" assignTo="{!invItem}"/>
                             </apex:commandButton>
                             
                         </apex:column>                  
@@ -58,14 +58,6 @@
                             <apex:dynamicComponent componentValue="{!ItemImg}"/>
                             -->
      
-        <!-- --> 
-        <audio controls="true" id="MinecraftMusic" autoplay="true" loop="true">
-            <source src="{!$Resource.MinecraftMusic}"/>
-        </audio>   
-        <script>
-            var audio = document.getElementById("MinecraftMusic");
-            audio.volume = 0.05;
-        </script>
-
+        <!-- -->
 	</apex:pageBlock>
 </apex:page>
